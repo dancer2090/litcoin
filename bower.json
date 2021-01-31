@@ -1,0 +1,22 @@
+{
+  "name": "Recovering",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "itchief.ru"
+  ],
+  "license": "mit",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/src/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

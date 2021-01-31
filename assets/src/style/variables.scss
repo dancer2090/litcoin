@@ -1,0 +1,29 @@
+// Variables Bootstrap 4
+
+$fontText: (
+  lg: 18px,
+  md: 14px,
+  sx: 12px
+);
+
+$red:     #BC9463;
+$green:   #BC9463;
+$blue:    #BC9463;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1100px,
+  xl: 1500px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 1024px,
+  lg: 1400px,
+  xl: 1470px
+);
+$grid-columns: 6;
+
+$browser-context: 18; // Default
