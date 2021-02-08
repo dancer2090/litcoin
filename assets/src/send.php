@@ -1,7 +1,9 @@
 <?php
+    $EMAIL_TO = 'ivaneichyk.ivan@gmail.com';
+    $SUBJECT = 'Order from litecoin';
     if($_REQUEST && $_REQUEST['name'] && $_REQUEST['email'] && $_REQUEST['phone']){
-        $address = $_ENV["EMAIL_TO"];
-        $subject = 'Order from litecoin';
+        $address = $EMAIL_TO;
+        $subject = $SUBJECT;
         $header = "Content-Type: text/html; charset=utf-8";
         $message = '
             <p><strong>Name: </strong><span>'.$_REQUEST['name'].'</span></p>
