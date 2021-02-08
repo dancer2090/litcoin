@@ -13,18 +13,21 @@ yarn install
 
 Recommended `node.js` version - `12.16.3`
 
-Variables in `main.js` file:
-- addressSend for adress php file
+Variables in `src/js/main.js` file:
+- FULL_URL - website https adress
 
-Variables in `send.php` file:
-- address for adress of email
-- subject for subject of email
+Variables in `src/send.php` file:
+- EMAIL_TO - address for adress of email
+- SUBJECT - subject for subject of email
 
 
 #### Local running
 
 ```bash
-gulp
+npm run gulp
 ```
 
-
+### Deployment
+1. Set variables like in Usage section
+2. `npm run gulp`
+3. Copy files from `assets/build` to hosting forder (apache, nginx)
