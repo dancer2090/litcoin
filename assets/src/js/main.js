@@ -1,7 +1,8 @@
 'use strict';
+const FULL_URL = 'https://layout.webbuilder.in.ua/litcoin';
 const axios = require('axios');
 
-const addressSend = '/send.php';
+const addressSend = `${process.env.FULL_URL}/send.php`;
 const body = document.querySelector('body');
 const modalBg = document.querySelector('.modal__bg');
 const modalForm = document.getElementById('modalForm');

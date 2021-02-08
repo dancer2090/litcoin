@@ -15,6 +15,7 @@ var autoprefixerList = [
 /* пути к исходным файлам (src), к готовым файлам (build), а также к тем, за изменениями которых нужно наблюдать (watch) */
 var path = {
     build: {
+        server: 'assets/build/',
         html: 'assets/build/',
         js: 'assets/build/js/',
         css: 'assets/build/css/',
@@ -22,6 +23,7 @@ var path = {
         fonts: 'assets/build/fonts/'
     },
     src: {
+        server: 'assets/src/*.php',
         html: 'assets/src/*.html',
         js: 'assets/src/js/main.js',
         style: 'assets/src/style/main.scss',
@@ -29,6 +31,7 @@ var path = {
         fonts: 'assets/src/fonts/**/*.*'
     },
     watch: {
+        server: 'assets/src/**/*.php',
         html: 'assets/src/**/*.html',
         js: 'assets/src/js/**/*.js',
         css: 'assets/src/style/**/*.scss',
@@ -64,7 +67,8 @@ const gulp = require('gulp'),  // подключаем Gulp
     rename = require('gulp-rename'),
     webpack = require('gulp-webpack'),
     webpackStream = require('webpack-stream'),
-    babel = require('gulp-babel');
+    babel = require('gulp-babel')
+    ;
 
 /* задачи */
 
@@ -157,6 +161,11 @@ gulp.task('image:build', function () {
         .pipe(gulp.dest(path.build.img)); // выгрузка готовых файлов
 });
 
+gulp.task('server:build', function () {
+    return gulp.src(path.src.server)
+      .pipe(gulp.dest(path.build.server));
+});
+
 // удаление каталога build 
 gulp.task('clean:build', function () {
     return gulp.src(path.clean, { read: false })
@@ -176,7 +185,8 @@ gulp.task('build',
             'css:build',
             'js:build',
             'fonts:build',
-            'image:build'
+            'image:build',
+            'server:build',
         )
     )
 );

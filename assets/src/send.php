@@ -1,6 +1,6 @@
 <?php
     if($_REQUEST && $_REQUEST['name'] && $_REQUEST['email'] && $_REQUEST['phone']){
-        $address = 'yuriy3304@gmail.com';
+        $address = $_ENV["EMAIL_TO"];
         $subject = 'Order from litecoin';
         $header = "Content-Type: text/html; charset=utf-8";
         $message = '

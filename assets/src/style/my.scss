@@ -511,3 +511,22 @@ body.modal-opened{
         text-align: center;
     }
 }
+
+.container_reviews {
+  padding: 140px 0 0 0;
+  text-align: center;
+  .btn_review {
+    margin: 0 auto;
+    text-decoration: none;
+    color: #4E91F6;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #EA792E;
+    }
+  }
+}
